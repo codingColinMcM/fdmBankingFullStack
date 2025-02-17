@@ -1,0 +1,36 @@
+<h2 id="pageHeader">View All Customers</h2>
+
+<td>
+    <button class="tableCreateButton" (click)="navigateToCreateCustomer()">Add Customer</button>
+</td>
+
+<table id="customersTable">
+    <thead>
+        <tr>
+            <th>Customer ID</th>
+            <th>Name</th>
+            <th>Street Number</th>
+            <th>City</th>
+            <th>Province</th>
+            <th>Postal Code</th>
+            <th class="actionButtons" id="actionsTitle">Actions              </th>
+        </tr>
+    </thead>
+    <tbody>
+	
+	  <tr *ngFor="let customer of customers">
+		<td>{{customer.customerId}}</td>
+		<td>{{customer.name}}</td>
+		<td>{{customer.address.streetNumber}}</td>
+		<td>{{customer.address.city}}</td>
+		<td>{{customer.address.province}}</td>
+		<td >{{customer.address.postalCode}}</td>
+		<td class="actionButtons">
+            <button class="tableUpdateButton" (click)="navigateToUpdateCustomer(customer.customerId)">Update</button>
+			<button class="tableDeleteButton" (click)="deleteCustomer(customer.customerId)">Delete</button>
+			<button class="viewCustomerAccountsButton" (click)="navigateToViewCustomerAccounts(customer.customerId)">View Accounts</button>
+	    </td>
+	  </tr>
+
+    </tbody>
+</table>

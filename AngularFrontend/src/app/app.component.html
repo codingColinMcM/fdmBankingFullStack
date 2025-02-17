@@ -1,0 +1,30 @@
+<header>
+  <button id="menuButton" #menuButton class="menuButton show" (click)="toggleSidebar()"><i class="fas fa-bars"></i></button>
+  <h1>Bank Account Application</h1>
+</header>
+
+<aside id="sidebar" #sidebar class="sidebar hide">
+  <div id="sidebarContent">
+    <div id="searchBarContent">
+      <input type="text" placeholder="Search..." id="searchBar">
+      <button id="searchButton" (click)="toggleMenuBar()"><i class="fas fa-search"></i></button>
+    </div>
+    <nav id="navigationLinks">
+      <a routerLink="" (click)="toggleMenuBar()">Home</a>
+      <a routerLink="Create_Customer" (click)="toggleMenuBar()">Create Customer</a>
+      <a routerLink="View_Customers" (click)="toggleMenuBar()">View Customers</a>
+    </nav>
+  </div>
+</aside>
+
+<main id="content" #content>
+  
+  <router-outlet></router-outlet>
+  
+  <div *ngIf="isHomePage()"></div>
+  <div *ngIf="isCreateCustomerPage()"></div>
+  <div *ngIf="isUpdateCustomerPage()"></div>
+  <div *ngIf="isCreateAccountPage()"></div>
+  <div *ngIf="isUpdateAccountPage()"></div>
+  
+</main>

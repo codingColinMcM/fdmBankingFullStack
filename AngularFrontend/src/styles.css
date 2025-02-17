@@ -1,0 +1,236 @@
+html {
+    filter: invert(0);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 0 0 0;
+	background-color: white;
+}
+
+header { 
+  filter: invert(1);
+  background-color: #737373;
+  color: rgb(250, 184, 213);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  position: relative;
+}
+
+#menuButton {
+  font-size: 60px;
+  color: #FFFFFF;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute; 
+  left: 15px; 
+  top: 15px; 
+  transition: transform 0.3s ease;
+}
+
+#menuButton.hide {
+  transform: translateX(-200%);
+}
+
+#menuButton.show {
+  transform: translateX(0%);
+}
+
+main {
+    margin-left: 50px; 
+    transition: margin-left 0.3s ease; 
+}
+
+#sidebar {
+    text-align: center;
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background-color: #8C8C8C;
+    padding-top: 10px;
+    transition: transform 0.3s ease; /* Sidebar smoothly slides out/in to frame */
+    transform: translateX(-100%); /* Sidebar hidden by default */
+}
+
+#sidebar.show {
+    transform: translateX(0); 
+}
+
+#sidebar.hide {
+    transform: translateX(-100%); 
+}
+
+main.shifted-right {
+    margin-left: 200px; 
+}
+
+#keepCentered.shifted-left {
+	padding-right: 700px; 
+}
+
+#searchBarContent {
+    display: flex; /* positions search bar and search button side by side */
+}
+
+#searchBar {
+    padding: 8px 3px 8px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    width: 70%;
+}
+
+#searchButton {
+    height: 33.6px;
+    background-color: #555;
+    color: white;
+    border: 1px solid #ccc;
+    border-left: 0; /* Avoid border between search bar and search button*/
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+#searchButton i {
+    font-size: 16px;
+}
+
+#navigationLinks a {
+    text-decoration: none;
+    color: rgb(107, 114, 211);
+    padding: 8px 0;
+    display: block; /* Compartmentalizes navlinks neatly */
+	text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+	font-size: 20px;
+}
+
+#navigationLinks a:hover {
+    background-color: #575757;
+}
+
+form {
+	width: 300px;
+	margin: 0 auto;
+}
+label, input, select {
+	display: block;
+	margin-bottom: 10px;
+	width: 100%;
+}
+input[type="submit"] {
+	width: auto;
+}
+
+/* General Table Styles */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+button.tableDeleteButton {
+    background-color: #f44336; 
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button.tableDeleteButton:hover {
+    background-color: #d32f2f;
+}
+
+button.tableUpdateButton {
+    background-color: #ff9800; 
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button.tableUpdateButton:hover {
+    background-color: #f57c00;
+}
+
+button.tableCreateButton {
+    background-color: #4caf50; 
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button.tableCreateButton:hover {
+    background-color: #388e3c;
+}
+
+button.viewCustomerAccountsButton {
+	background-color: #0A83FF;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button.viewCustomerAccountsButton:hover {
+	background-color: #0067FF; 
+}
+
+td > button {
+    margin-right: 5px;
+}
+
+.actionButtons {
+	width: 30%;
+}
+
+th#actionsTitle {
+	text-align: center;
+	padding-right: 111px;
+}
+
+.menu-button{
+    height: 100%;
+    width: 20%;
+    float: right;
+    border-left: 1px solid black;
+    background: #808080;
+    line-height: 70px;
+    text-align: center;
+}
+
+#homePageContent {
+	text-align: center;
+	margin-left: 0px; 
+	padding-right: 47px;
+}

@@ -1,0 +1,32 @@
+<h2 id="pageHeader">View All Accounts</h2>
+
+<td>
+    <button class="tableCreateButton" (click)="navigateToCreateAccount()">Add Account</button>
+</td>
+
+<table id="accountsTable">
+    <thead>
+        <tr>
+            <th>Account ID</th>
+            <th>Balance</th>
+            <th>Interest Rate/Next Check Number</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+	
+		<tr *ngFor="let account of accounts">
+		  <td>{{account.accountId}}</td>
+		  <td>{{account.balance}}</td>
+		  <td>
+            <span *ngIf="account.interestRate !== undefined">Interest Rate: {{ account.interestRate }}</span>
+            <span *ngIf="account.nextCheckNumber !== undefined">Next Check Number: {{ account.nextCheckNumber }}</span>
+          </td>
+		  <td>
+            <button class="tableUpdateButton" (click)="navigateToUpdateAccount(account.accountId)">Update</button>
+            <button class="tableDeleteButton" (click)="deleteAccount(account.accountId)">Delete</button>
+		  </td>
+		</tr>
+
+    </tbody>
+</table>

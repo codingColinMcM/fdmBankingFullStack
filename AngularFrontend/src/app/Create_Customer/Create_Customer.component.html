@@ -1,0 +1,24 @@
+
+
+
+<form class="createCustomerForm" (ngSubmit)="onSubmit()">
+
+  <h2>Create New Customer</h2>
+  <label for="customerType">Type of Customer</label>
+  <select #choice name="customerType" id="customerType" [(ngModel)]="customerType" required>
+    <option value="">Select the type of account</option>
+    <option value="PERSON">Person</option>
+    <option value="COMPANY">Company</option>
+  </select>
+
+  <label for="name">Name</label>
+  <input type="text" name="name" [(ngModel)]="name"required/>
+
+  <label for="streetNumber">Street Number</label>
+  <input type="text" name="streetNumber" [(ngModel)]="streetNumber"required/>
+
+  <label for="postalCode">Postal Code</label>
+  <input type="text" name="postalCode" [(ngModel)]="postalCode"required/>
+
+  <button type="submit" value="Submit">Create Customer</button>
+</form>
